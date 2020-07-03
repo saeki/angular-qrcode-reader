@@ -1,0 +1,7 @@
+<h3 mat-dialog-title>QR CODE</h3>
+<mat-dialog-content class="mat-typography">
+  <p *ngIf="data.qrcode !== undefined">{{ data.qrcode.data }}</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="true">OK</button>
+</mat-dialog-actions>

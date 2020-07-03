@@ -1,0 +1,10 @@
+<button *ngIf="!isActive()" mat-fab (click)="toggleVideoMedia()" [disabled]="isActive()" color="primary" aria-label="videocam icon-button">
+  <mat-icon>videocam</mat-icon>
+</button>
+
+<button *ngIf="isActive()" mat-fab (click)="toggleVideoMedia()" [disabled]="!isActive()" color="warn" aria-label="videocam icon-button">
+  <mat-icon>videocam_off</mat-icon>
+</button>
+<br>
+<video #video autoplay muted playsinline width="640" height="480"></video>
+<canvas #canvas width="960" height="640" hidden></canvas>
